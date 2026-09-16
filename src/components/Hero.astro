@@ -1,0 +1,32 @@
+---
+const features = [
+  { title: "AI Agent Tutorials", description: "Step-by-step guides for building autonomous AI agents", icon: "/icons/molecule.svg" },
+  { title: "Skills Matrix", description: "Comprehensive skills map for AI engineering roles", icon: "/icons/skills.svg" },
+  { title: "Tool Reviews", description: "Hands-on reviews of AI development tools and platforms", icon: "/icons/tools.svg" },
+  { title: "Model Benchmarks", description: "Side-by-side comparisons of leading AI models", icon: "/benchmarks.svg" },
+];
+---
+<header class="min-h-[60vh] flex items-center justify-center relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 mb-6">
+      AI Agent Mastery
+    </h1>
+    <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+      The comprehensive resource for AI agent development, skills, tools, and benchmarks.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      {{#each features}}
+      <a href="{href}" class="relative inline-flex items-center rounded-md bg-primary/10 px-4 py-3 text-sm font-medium text-primary hover:bg-primary/5 transition-colors">
+        <span class="relative flex h-5 w-5 rounded-full flex-shrink-0 items-center justify-center mx-2">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="{icon}"/>
+          </svg>
+        </span>
+        <span>{title}</span>
+      </a>
+      {{/each}}
+    </div>
+  </div>
+  {/* Decorative orbit shape */}
+  <div class="absolute -inset-4 -inset-0 opacity-10 blur-2xl rounded-3xl bg-primary/5 animate-orbit"></div>
+</header>

@@ -1,0 +1,26 @@
+---
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/skills", label: "Skills" },
+  { href: "/tools", label: "Tools" },
+  { href: "/benchmarks", label: "Benchmarks" },
+];
+---
+<nav class="border-b bg-background/50 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2">
+        <span class="self-center text-xl font-bold tracking-tighter">superblog</span>
+      </a>
+      <ul class="flex items-center gap-6">
+        {{#each links}}
+        <li>
+          <a href="{href}" class="text-sm font-medium transition-colors hover:text-primary"
+            >{label}</a
+          >
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</nav>

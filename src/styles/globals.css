@@ -1,0 +1,40 @@
+/*
+  Global styles for blog similar to superbash.ai
+  Tailwind directives - these must be at the root
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans antialiased bg-background text-foreground;
+}
+
+/* Custom component patterns */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @outline-2;
+  @outline-offset-2;
+  @outline-primary;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    @transition-none;
+    animation-none;
+  }
+  .orbits {
+    animation: none;
+  }
+}

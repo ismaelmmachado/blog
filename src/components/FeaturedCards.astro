@@ -1,0 +1,55 @@
+---
+const posts = [
+  {
+    title: "Building Autonomous AI Agents",
+    description: "From basics to production: a complete roadmap for agent development",
+    slug: "building-autonomous-ai-agents",
+    tags: ["AI", "Agents", "Roadmap"],
+    readTime: "8 min read",
+  },
+  {
+    title: "Tool Review: LangGraph Studio",
+    description: "Hands-on evaluation of the new agent development environment",
+    slug: "tool-review-langgraph-studio",
+    tags: ["Tools", "LangGraph"],
+    readTime: "6 min read",
+  },
+  {
+    title: "GPT-4.5 vs Claude 3.5 Sonnet",
+    description: "Head-to-head benchmark across 10 real-world tasks",
+    slug: "gpt-4-5-vs-claude-3-5",
+    tags: ["Benchmarks", "LLMs"],
+    readTime: "10 min read",
+  },
+];
+---
+<section class="py-12 bg-background">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-10">
+      Featured
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {{#each posts}}
+      <article
+        class="group rounded-lg bg-card border border-border p-6 hover:border-primary transition-colors"
+      >
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2 hover:text-primary group-hover:text-primary">
+          {title}
+        </h3>
+        <p class="text-sm text-muted-foreground mb-4 line-clamp-3">
+          {description}
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-muted-foreground">{readTime}</span>
+          <a
+            href="/blog/{slug}"
+            class="text-primary underline-offset-4 hover:underline"
+          >
+            Read →
+          </a>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+  </div>
+</section>
